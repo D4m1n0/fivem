@@ -1,0 +1,33 @@
+.needs {
+  position: absolute;
+  bottom: 16px;
+  left: 320px;
+  width: 150px;
+}
+.needs__food {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 16px;
+  &--bar {
+    background-color: red;
+  }
+}
+.needs__drink {
+  width: 100%;
+  height: 20px;--bar {
+    background-color: blue;
+  }
+}
+.needs__health {
+  width: 100%;
+  height: 20px;
+  &--bar {
+    background-color: green;
+  }
+}
+.needs__bar {
+  display: block;
+  height: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

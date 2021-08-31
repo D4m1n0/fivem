@@ -1,0 +1,13 @@
+RegisterCommand('carStolen', function(source, args)
+  local vehicleName = GetDisplayNameFromVehicleModel(GetEntityModel(GetVehiclePedIsIn(PlayerPedId())))
+  print(vehicleName)
+  TriggerServerEvent('crimiVehicle:getVehicleInDB', string.lower(vehicleName))
+end, false)
+
+RegisterNetEvent('crimiVehicle:setMessage')
+AddEventHandler('crimiVehicle:setMessage', function(result)
+  print('message:', result.response[1])
+  SetNotificationTextEntry("STRING")
+  AddTextComponentString(result.response[2])
+  DrawNotification(true, true)
+end)

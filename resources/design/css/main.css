@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+
+.needs {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: white;
+}
+
+.show {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

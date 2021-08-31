@@ -1,0 +1,8 @@
+.menu {
+	position: absolute;
+	top: 40px;
+	right: 0;
+	color: white;
+	background-color: black;
+	padding: 10px;
+}
