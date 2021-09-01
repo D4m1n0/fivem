@@ -26,19 +26,19 @@ function getMission(playerID)
   {["@player_id"] = playerID},
   function(result)
     if result[1] == nil then
-      getCaseLocation()
+      getCaseLocation(playerID)
     else
       TriggerClientEvent('crimiCase:setMessage', -1, {response={"Mission en cours"}})
     end
   end)
 end
 
-function getCaseLocation()
+function getCaseLocation(playerID)
   MySQL.Async.fetchAll("SELECT * FROM crimi_case_location WHERE id = @id",
   {["@id"] = math.random(1, 10)},
   function(resultSelect)
     if resultSelect[1] ~= nil then
-      createCaseMission(resultSelect[1], playerID)
+      createCaseMission(resultSelect, playerID)
     end
   end)
 end

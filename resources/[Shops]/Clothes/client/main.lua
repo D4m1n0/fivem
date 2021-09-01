@@ -11,11 +11,6 @@ AddEventHandler('clothes:setLocationClothingShops', function(result)
   EndTextCommandSetBlipName(blipMap)
 end)
 
-RegisterCommand("coords", function(source, args)
-  local coords = GetEntityCoords(PlayerPedId())
-  print(coords)
-end)
-
 function DisplayHelpText(str)
     SetTextComponentFormat("STRING")
     AddTextComponentString(str)
