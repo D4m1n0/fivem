@@ -21,7 +21,7 @@ storage
 dump.rdb
 .workspace
 .cache
-/cache/
+/cache/*
 
 node_modules
 bower_components
