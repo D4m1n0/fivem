@@ -35,7 +35,7 @@ AddEventHandler('crimiVehicleDrug:getVehicleDrugMission', function()
 end)
 
 function getMission(playerID)
-  MySQL.Async.fetchAll("SELECT id FROM crimi_vehicle_drug_mission WHERE player_id = @player_id AND running = 0",
+  MySQL.Async.fetchAll("SELECT id FROM crimi_vehicle_drug_mission WHERE player_id = @player_id AND running = 1",
   {["@player_id"] = playerID},
   function(result)
     if result[1] == nil then
@@ -99,3 +99,16 @@ function setVehicleDrugMission(playerID, location, model, destination)
     TriggerClientEvent('crimiVehicleDrug:runMission', -1, {response={message="success waypoint and waypoint", data=data}})
   end)
 end
+
+RegisterServerEvent('crimiVehicleDrug:endVehicleDrugMission')
+AddEventHandler('crimiVehicleDrug:endVehicleDrugMission', function(vehicle, id)
+  print("logging", id)
+  MySQL.Async.fetchAll("UPDATE crimi_vehicle_drug_mission SET running=0 WHERE id=@id",
+  {["@id"] = id},
+  function(result)
+    print('server', json.encode(result))
+    if result ~= nil then
+      TriggerClientEvent('crimiVehicleDrug:setMessage', -1, {response={"Mission terminée"}})
+    end
+  end)
+end)
