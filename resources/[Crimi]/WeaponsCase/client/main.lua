@@ -107,6 +107,8 @@ AddEventHandler('crimiCase:drawMarker', function(result)
               fWhile = 0
               oneStep = 0
               DeleteObject(object)
+              SetPlayerWantedLevel(PlayerId(), 2, false)
+              SetPlayerWantedLevelNow(PlayerId(), false)
               TriggerServerEvent('crimiCase:endCaseMission', result.response[4])
             end)
           end

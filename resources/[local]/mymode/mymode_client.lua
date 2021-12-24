@@ -1,3 +1,9 @@
+RegisterCommand('snow', function(source, args)
+  local weather = args[1] or 'XMAS'
+  print(weather)
+  SetWeatherTypeNowPersist(weather)
+end, false)
+
 RegisterCommand('car', function(source, args)
     -- account for the argument not being passed
     local vehicleName = args[1] or 'adder'
@@ -132,3 +138,8 @@ function revivePed(ped)
 	SetPlayerInvincible(ped, false)
 	ClearPedBloodDamage(ped)
 end
+
+RegisterCommand("coords", function(source, args)
+  local coords = GetEntityCoords(PlayerPedId())
+  print(coords)
+end)

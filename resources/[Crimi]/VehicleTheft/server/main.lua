@@ -23,12 +23,8 @@ AddEventHandler('crimiVehicle:setVehicleCanStealInDB', function(name)
   MySQL.Async.fetchAll("UPDATE vehicles SET steal=1 WHERE model=@name",
   {["@name"] = name},
   function(result)
-    print('server', result)
-    if result[1] ~= nil then
-      TriggerClientEvent('crimiVehicle:setMessage', -1, {response={"success", 'Vehicule ' .. name .. ' modifié dans la DB~'}})
-    end
+    TriggerClientEvent('crimiVehicle:setMessage', -1, {response={"success", 'Vehicule ' .. name .. ' modifié dans la DB~'}})
   end)
-  TriggerClientEvent('crimiVehicle:setMessage', -1, {response={"success", 'Vehicule ' .. name .. ' modifié dans la DB~'}})
 end)
 
 RegisterServerEvent('crimiVehicle:setVehicleInDB')
@@ -37,9 +33,8 @@ AddEventHandler('crimiVehicle:setVehicleInDB', function(name)
   {["@name"] = name},
   function(result)
     print('server', result)
-    if result[1] ~= nil then
+    if result then
       TriggerClientEvent('crimiVehicle:setMessage', -1, {response={"success", 'Vehicule ' .. name .. ' ajouté dans la DB~'}})
     end
   end)
-  TriggerClientEvent('crimiVehicle:setMessage', -1, {response={"success", 'Vehicule ' .. name .. ' ajouté dans la DB~'}})
 end)

@@ -10,9 +10,10 @@ files {
 client_scripts {
     "client/main.lua",
     "client/removeHUD.lua",
+    "client/money.lua",
 }
 
 server_scripts {
-  "server/main.lua",
-  "@mysql-async/lib/MySQL.lua"
+	"@mysql-async/lib/MySQL.lua",
+  "server/main.lua"
 }

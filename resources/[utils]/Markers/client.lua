@@ -1,0 +1,28 @@
+RegisterNetEvent('markers:drawMarker')
+AddEventHandler("markers:drawMarker", function(location)
+  DrawMarker(
+    27,
+    location.x,
+    location.y,
+    location.z,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.5,
+    1.5,
+    1.5,
+    179,
+    39,
+    39,
+    155,
+    false,
+    true,
+    2,
+    nil,
+    nil,
+    false
+  )
+end)

@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js init
+
+PATH: 
+  C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\Users\damien\AppData\Local\Programs\Python\Python37-32;C:\Users\damien\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\ProgramData\ComposerSetup\bin;C:\Users\damien\AppData\Local\Microsoft\WindowsApps;C:\Users\damien\AppData\Local\atom\bin;C:\Users\damien\AppData\Roaming\Composer\vendor\bin;C:\Users\damien\AppData\Roaming\npm;D:\Program Files (x86)\Brackets\command;D:\Program Files (x86)\PuTTY\;D:\Program Files\Git\cmd;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\System32\OpenSSH\;C:\wamp64\bin\php\php7.2.4;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Program Files\Symfony;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\damien\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Common Files\Acronis\VirtualFile\;C:\Program Files (x86)\Common Files\Acronis\VirtualFile64\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Yarn\bin\;C:\Users\damien\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\damien\AppData\Local\Programs\Python\Python37-32\;C:\Users\damien\.pyenv\pyenv-win\bin;C:\Users\damien\.pyenv\pyenv-win\shims;C:\Users\damien\AppData\Local\Microsoft\WindowsApps;C:\Users\damien\AppData\Roaming\Composer\vendor\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\wamp64\bin\php\php7.2.4;C:\Program Files\Java\jdk-11.0.1\bin;C:\Users\damien\AppData\Local\Android\Sdk\platform-tools;C:\Users\damien\AppData\Local\Android\Sdk\tools;C:\Users\damien\AppData\Local\Android\Sdk\emulator;C:\Users\damien\AppData\Local\Android\Sdk\tools\bin;D:\Program Files\Microsoft VS Code\bin;C:\Users\damien\go\bin;E:\Program\PyCharm Edu 2019.1\bin;C:\Users\damien\AppData\Local\atom\bin;F:\programmes\MiKTeX 2.9\miktex\bin\x64\;C:\Users\damien\AppData\Roaming\npm;C:\Users\damien\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\JetBrains\WebStorm 2020.2.3\bin;;C:\Users\damien\AppData\Local\Microsoft\WindowsApps;C:\Users\damien\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:137009:13)
+      at Interface.emit (events.js:210:5)
+      at Interface._ttyWrite (readline.js:887:16)
+      at ReadStream.onkeypress (readline.js:191:10)
+      at ReadStream.emit (events.js:210:5)
+      at emitKeys (internal/readline/utils.js:433:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1153:36)
+      at ReadStream.emit (events.js:210:5)
+      at addChunk (_stream_readable.js:309:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

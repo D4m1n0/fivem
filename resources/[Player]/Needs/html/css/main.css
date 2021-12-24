@@ -8,22 +8,16 @@
   width: 100%;
   height: 20px;
   margin-bottom: 16px;
-  &--bar {
-    background-color: red;
-  }
+}
+.needs__food--bar {
+  background-color: red;
 }
 .needs__drink {
   width: 100%;
-  height: 20px;--bar {
-    background-color: blue;
-  }
-}
-.needs__health {
-  width: 100%;
   height: 20px;
-  &--bar {
-    background-color: green;
-  }
+}
+.needs__drink--bar {
+  background-color: blue;
 }
 .needs__bar {
   display: block;

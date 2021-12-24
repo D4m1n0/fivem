@@ -10,14 +10,3 @@ AddEventHandler('lscustoms:setLocationLSCustoms', function(result)
   AddTextComponentString("LS Custom")
   EndTextCommandSetBlipName(blipMap)
 end)
-
-RegisterCommand("coords", function(source, args)
-  local coords = GetEntityCoords(PlayerPedId())
-  print(coords)
-end)
-
-function DisplayHelpText(str)
-    SetTextComponentFormat("STRING")
-    AddTextComponentString(str)
-    DisplayHelpTextFromStringLabel(0, 0, 1, -1)
-end

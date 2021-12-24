@@ -1,0 +1,9 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "script" : {
+    "watch": "sass --watch ./scss/main.scss ./css/main/css"
+  }
+}

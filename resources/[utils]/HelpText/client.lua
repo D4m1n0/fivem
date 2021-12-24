@@ -1,0 +1,6 @@
+RegisterNetEvent('helpText:DisplayHelpText')
+AddEventHandler("helpText:DisplayHelpText", function(str)
+  SetTextComponentFormat("STRING")
+  AddTextComponentString(str)
+  DisplayHelpTextFromStringLabel(0, 0, 1, -1)
+end)

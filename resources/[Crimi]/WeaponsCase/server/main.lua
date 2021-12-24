@@ -35,7 +35,7 @@ end
 
 function getCaseLocation(playerID)
   MySQL.Async.fetchAll("SELECT * FROM crimi_case_location WHERE id = @id",
-  {["@id"] = math.random(1, 10)},
+  {["@id"] = math.random(1, 18)},
   function(resultSelect)
     if resultSelect[1] ~= nil then
       createCaseMission(resultSelect, playerID)

@@ -1,4 +1,5 @@
 TriggerServerEvent('clothes:getLocationClothingShops')
+
 RegisterNetEvent('clothes:setLocationClothingShops')
 AddEventHandler('clothes:setLocationClothingShops', function(result)
   local positionMapMarker = result[0]

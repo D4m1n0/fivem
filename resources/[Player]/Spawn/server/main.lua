@@ -13,20 +13,22 @@ AddEventHandler('spawn:getPlayerSpawn', function()
     {["@playerID"] = playerID},
     function(result)
       if result[1] == nil then
-        firstSpawn()
+        firstSpawn(playerID)
       else
-        print('server', json.encode(result))
+        print('server', result[1].last_position)
+        local last_position = json.decode(result[1].last_position)
+        print("last_position", last_position)
         local data = {
-          x= result[1].last_position.x,
-          y= result[1].last_position.y,
-          z= result[1].last_position.z,
+          x= last_position.x,
+          y= last_position.y,
+          z= last_position.z,
         }
         TriggerClientEvent('spawn:spawnPlayer', -1, {response={message="Spawn", data=data}})
       end
   end)
 end)
 
-function firstSpawn()
+function firstSpawn(playerID)
   local location = {
     x = 1464.723,
     y = 1105.405,

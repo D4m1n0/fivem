@@ -1,5 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: "Roboto";
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.9);
+}
+.menu__title-h {
+  margin: 0;
+  background-color: #e14c4c;
+  padding: 8px 16px;
+  font-size: 20px;
+  text-align: center;
+}
+.menu__container {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__title {
+  display: block;
+  font-weight: 500;
+}
+.menu .active {
+  background-color: #fafafa;
+}
+.menu__checkbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  appearance: none;
+}
+.menu__checkbox:checked {
   background-color: red;
+}
+
+.show {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
