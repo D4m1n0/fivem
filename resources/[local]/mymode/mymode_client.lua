@@ -1,6 +1,5 @@
 RegisterCommand('snow', function(source, args)
   local weather = args[1] or 'XMAS'
-  print(weather)
   SetWeatherTypeNowPersist(weather)
 end, false)
 

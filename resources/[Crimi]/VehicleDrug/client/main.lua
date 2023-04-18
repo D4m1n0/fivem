@@ -193,3 +193,45 @@ function createPed()
   RequestAnimDict("amb@world_human_hang_out_street@female_arms_crossed@base")
   TaskPlayAnim(ped,"amb@world_human_hang_out_street@female_arms_crossed@base", "base", 8.0, -8, -1, 49, 0, 0, 0, 0)
 end
+
+
+-- Coordonnées de la zone d'exposition de véhicules
+local showroomCoords = vector3(139.50, -1287.46, 29.24)
+
+-- Création des véhicules à exposer
+local vehicles = {
+  { model = "adder", coords = vector3(139.50, -1287.46, 29.24), heading = 25.0 },
+  { model = "comet2", coords = vector3(141.50, -1287.46, 29.24), heading = 25.0 },
+  { model = "vacca", coords = vector3(143.50, -1287.46, 29.24), heading = 25.0 }
+}
+
+-- Boucle pour créer les véhicules
+for i, vehicle in ipairs(vehicles) do
+  RequestModel(vehicle.model)
+--   while not HasModelLoaded(vehicle.model) do
+--     Citizen.Wait(1)
+--   end
+  local spawnedVehicle = CreateVehicle(vehicle.model, vehicle.coords, vehicle.heading, true, false)
+  SetEntityAsMissionEntity(spawnedVehicle, true, true)
+  SetVehicleOnGroundProperly(spawnedVehicle)
+  FreezeEntityPosition(spawnedVehicle, true)
+  SetVehicleDoorsLocked(spawnedVehicle, 2)
+  SetVehicleDoorsLockedForAllPlayers(spawnedVehicle, true)
+end
+
+-- Fonction pour vérifier si un joueur est dans la zone d'exposition de véhicules
+function IsPlayerInShowroom(player)
+  local playerCoords = GetEntityCoords(GetPlayerPed(player))
+  local distance = #(playerCoords - showroomCoords)
+  return distance <= 5.0
+end
+
+-- Événement pour bloquer l'entrée des joueurs qui ne sont pas dans la zone d'exposition de véhicules
+AddEventHandler('playerSpawned', function()
+  local player = source
+  if not IsPlayerInShowroom(player) then
+    FreezeEntityPosition(GetPlayerPed(player), true)
+    SetEntityCoords(GetPlayerPed(player), vector3(150.0, -1285.0, 29.24))
+    FreezeEntityPosition(GetPlayerPed(player), false)
+  end
+end)

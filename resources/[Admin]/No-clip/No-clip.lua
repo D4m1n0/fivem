@@ -68,7 +68,9 @@ Citizen.CreateThread(function()
 
             SetEntityCollision(noclipEntity, not noclipActive, not noclipActive)
             FreezeEntityPosition(noclipEntity, noclipActive)
-            SetEntityInvincible(noclipEntity, noclipActive)
+            if not GetPlayerInvincible(noclipEntity) then
+              SetEntityInvincible(noclipEntity, noclipActive)
+            end
             SetVehicleRadioEnabled(noclipEntity, not noclipActive) -- [[Stop radio from appearing when going upwards.]]
         end
 
